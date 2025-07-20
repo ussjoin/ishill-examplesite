@@ -1,0 +1,3 @@
+[submodule "themes/ishill"]
+	path = themes/ishill
+	url = https://gitlab.com/ussjoin/ishill.git
