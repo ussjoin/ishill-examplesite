@@ -2,7 +2,7 @@ variables:
   HUGO_VERSION: 0.148.1
 
 default:
-  image: lscr.io/linuxserver/chromium:latest
+  image: ubuntu:latest
 
 stages:
   - build
