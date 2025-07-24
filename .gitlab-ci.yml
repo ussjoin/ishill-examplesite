@@ -1,5 +1,6 @@
 variables:
   HUGO_VERSION: 0.148.1
+  GIT_SUBMODULE_STRATEGY: recursive
 
 default:
   image: ubuntu:latest
