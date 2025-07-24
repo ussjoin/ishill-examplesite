@@ -23,7 +23,7 @@ build-job:
     - npm install -g sass
     - "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
     - hugo --gc --minify --baseURL "$CI_PAGES_URL/"
-    - cd public && source /tmp/tmpvenv/bin/activate && bash ./zineify.sh
+    - source /tmp/tmpvenv/bin/activate && cd public && pwd && ls -ahl && bash ./zineify.sh
   pages:
     publish: public
   artifacts:

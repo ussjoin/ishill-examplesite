@@ -47,7 +47,29 @@ If you already know how to use Hugo, great! If you don't know how to use Hugo, b
 
 ### 5. Publish (GitLab)
 
+Click Settings (on the left), then General. Scroll to "Visibility, project features, permissions" and click on it. Scroll down to "Pages," click "Only Project Members," and select "Everyone With Access." Scroll to the bottom of the section and click the blue "Save changes" button.
+
+Now, click Deploy (on the left), then Pages. Then do the following:
+
+1. Enter "node:lts" under "Select your build image."
+2. Hit Next.
+3. Next, Next, Commit.
+4. Now GitLab has successfully overwritten the perfectly good build file the repository started with. This is suboptimal. Luckily, you have a fix! 
+5. Click the name of your repository (it's likely just to the right of your name) near the top of your screen, so you see your files again.
+6. Click `.gitlab-ci.yml`, which will almost certainly have a message next to it like "Update .gitlab-ci.yml."
+7. Open <https://gitlab.com/ussjoin/ishill-examplesite/-/blob/main/.gitlab-ci.yml> in another browser tab. Select all the text that's in the file (in the monospaced typeface). Copy it (Ctrl-C, Command-C, etc.)
+8. Back in your main browser, click the blue Edit button on the upper-right, then "Edit Single File."
+9. Select all in the editor.
+10. Paste what you copied from the other tab (Ctrl-V, Command-V, etc.).
+11. Click the blue "Commit Changes" button, then in the popup, click the new blue "Commit Changes" button.
+12. Click the name of your repository, just like you did in step 5.
+13. On the left, click Deploy, then Pages.
+
 ### 5. Publish (GitHub)
+
+Click Settings, then Pages (on the left). Under Branch, where it says "GitHub Pages is currently disabled," click None, then select `main`. Click Save. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
+
+Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. Click "Run workflow," then the green "Run workflow" button. 
 
 ## More Coming Soon
 
