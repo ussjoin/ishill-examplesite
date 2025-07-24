@@ -64,12 +64,23 @@ Now, click Deploy (on the left), then Pages. Then do the following:
 11. Click the blue "Commit Changes" button, then in the popup, click the new blue "Commit Changes" button.
 12. Click the name of your repository, just like you did in step 5.
 13. On the left, click Deploy, then Pages.
+14. Click "Domains & settings."
+15. Uncheck the box that says "Use unique domain," then click "Save changes."
+16. Now you'll have a URL in the box marked "Access pages." Your site will be there!
+17. If the page looks weird (e.g., unformatted), run a new build job. (This is a one-time issue when the URL to your site changes, but you wanted to do that to get rid of the "unique" domain.)
+  1. Click Build, then Pipelines.
+  2. Click the blue "New pipeline" button.
+  3. Click the (new) blue "New pipeline" button. You don't need to enter anything on that page.
+  4. When the build completes, check the site again.
 
 ### 5. Publish (GitHub)
 
-Click Settings, then Pages (on the left). Under Branch, where it says "GitHub Pages is currently disabled," click None, then select `main`. Click Save. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
-
-Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. Click "Run workflow," then the green "Run workflow" button. 
+1. Click Settings, then Pages (on the left). 
+2. Under Branch, where it says "GitHub Pages is currently disabled," click None, then select `main`. 
+3. Click Save. 
+4. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
+5. Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. 
+6. Click "Run workflow," then the green "Run workflow" button. 
 
 ## More Coming Soon
 
