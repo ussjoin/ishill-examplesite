@@ -7,6 +7,18 @@ author = "Ishill"
 
 Ishill ([pronounced](https://en.m.wikibooks.org/wiki/Romanian/Pronunciation_and_alphabet) EE-sheell) is a publishing stack to enable people to go quickly from "I have an idea I want to hand out as a zine" to "I have a stack of zines." It is named in honor of [Joseph Ishill](https://en.wikipedia.org/wiki/Joseph_Ishill), a printer.
 
+## Code?
+
+* Example site hosted on GitLab Pages: <https://ussjoin.gitlab.io/ishill-examplesite/>
+    * Example site repository on GitLab: <https://gitlab.com/ussjoin/ishill-examplesite>
+* Example site hosted on GitHub Pages: <https://ussjoin.github.io/ishill-examplesite/>
+    * Example site repository on GitHub: <https://github.com/ussjoin/ishill-examplesite>
+* **Example site hosted on Autistici/Inventati (A/I): <https://www.autistici.org/ishill/>**
+* Theme repository on GitLab: <https://gitlab.com/ussjoin/ishill>
+* Theme repository on GitHub: <https://github.com/ussjoin/ishill>
+
+## Why?
+
 Why do this? A few reasons.
 
 * For one thing, it's *obnoxiously* difficult to go from Markdown (or any simple text format) to zine. If it could fit on a [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) (so less than half a normally-printed page), great. If it can fit on one printed page, front and back, one can make a four-half-page brochure with a bit of mucking about in Word, Pages, or similar. After that, it's not simple unless you have [Adobe InDesign](https://www.adobe.com/products/indesign.html) or other dedicated (and very expensive) prepress software; as far as I've found, there's no "happy path" for making the transition.

@@ -12,6 +12,8 @@ weight = 20
 
 Hello ideally-human person! You've probably found this at [GitLab](https://gitlab.com/ussjoin/ishill) or [GitHub](https://github.com/ussjoin/ishill), or possibly on a bench somewhere in meatspace. Read on to learn what you've found!
 
+**Note: this monograph is incomplete and in draft.** We hope it's useful to you even as-is, but it's quite clearly incomplete. You're welcome to reach out for further assistance using the Issues function on [GitLab](https://gitlab.com/ussjoin/ishill/-/issues) or [GitHub](https://github.com/ussjoin/ishill/issues), and I'll do my best to aid you (and add the things that confused you to this document so that they can help others!).
+
 ## The Pitch (Human)
 
 Want to write/make zines but don't have Illustrator or InDesign, and aren't a good enough artist to do twenty pages of lettering by hand? Want to use a computer to make longer content than the (lovely, if short) [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) format? Optionally, want to simultaneously publish to print and the web, so that people who come across one of your zines can find more?
@@ -44,6 +46,10 @@ If you already know how to use Hugo, great! If you don't know how to use Hugo, b
 ### 3. Change the Config
 
 ### 4. Add Content
+
+### 5. Publish (Autistici/Inventati)
+
+Autistici/Inventati (abbreviated A/I) is the home of the well-loved https://noblogs.org/, but they also provide free hosting for static websites just like Ishill sites (or any Hugo sites). A step-by-step guide to using their WebDAV upload system is coming soon.
 
 ### 5. Publish (GitLab)
 
