@@ -35,7 +35,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.148.1
+      HUGO_VERSION: 0.150.1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -43,8 +43,6 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Install Vivliostyle
-        run: npm install -g @vivliostyle/cli # https://github.com/vivliostyle/vivliostyle-cli?tab=readme-ov-file
       - name: Install Python Venv
         run: sudo apt install python3-pip # https://github.com/rrthomas/psutils
       - name: Configure Python Venv
