@@ -57,7 +57,17 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Build with Hugo and then build the zines
+      - name: Build with Hugo for the zines
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: America/Los_Angeles
+        run: |
+          hugo \
+            --gc \
+            --minify &&
+          cd public && source ${{ runner.temp }}/tmpvenv/bin/activate && bash ./zineify.sh
+      - name: Build with Hugo for the web
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
@@ -67,7 +77,6 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" &&
-          cd public && source ${{ runner.temp }}/tmpvenv/bin/activate && bash ./zineify.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

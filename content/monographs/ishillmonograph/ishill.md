@@ -49,7 +49,7 @@ If you already know how to use Hugo, great! If you don't know how to use Hugo, b
 
 ### 5. Publish (Autistici/Inventati)
 
-Autistici/Inventati (abbreviated A/I) is the home of the well-loved https://noblogs.org/, but they also provide free hosting for static websites just like Ishill sites (or any Hugo sites). A step-by-step guide to using their WebDAV upload system is coming soon.
+Autistici/Inventati (abbreviated A/I) is the home of the well-loved https://noblogs.org/, but they also provide free hosting for static websites just like Ishill sites (or any Hugo sites). A step-by-step guide to using their WebDAV upload system for Ishill is coming soon, though [their docs are also excellent](https://www.autistici.org/docs/web/webdav).
 
 ### 5. Publish (GitLab)
 

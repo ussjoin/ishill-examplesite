@@ -66,13 +66,6 @@ weight = 2
     delimiter = '.'
     suffixes = ["xml"]
 
-[outputFormats.vivliostyle]
-  name = 'Vivliostyle'
-  basename = 'vivliostyle.config'
-  mediaType = "application/javascript"
-  isPlainText = true
-  notAlternative = true
-
 [outputFormats.zineify]
   name = 'Zineify'
   basename = 'zineify'
@@ -86,4 +79,4 @@ weight = 2
 
 
 [outputs]
-  home = ["HTML", "vivliostyle", "zineify", "Atom"]
+  home = ["HTML", "zineify", "Atom"]
