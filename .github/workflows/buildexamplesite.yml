@@ -66,7 +66,7 @@ jobs:
           hugo \
             --gc \
             --minify &&
-          cd public && source ${{ runner.temp }}/tmpvenv/bin/activate && bash ./zineify.sh
+          cd public && source ${{ runner.temp }}/tmpvenv/bin/activate && bash ./zineify.sh && cd ..
       - name: Build with Hugo for the web
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
