@@ -1,5 +1,5 @@
 variables:
-  HUGO_VERSION: 0.150.1
+  HUGO_VERSION: 0.160.0
   GIT_SUBMODULE_STRATEGY: recursive
 
 default:
