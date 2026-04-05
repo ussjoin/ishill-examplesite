@@ -30,7 +30,7 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: codeberg-medium
+    runs-on: codeberg-small
     env:
       HUGO_VERSION: 0.160.0
     steps:
@@ -49,9 +49,6 @@ jobs:
         run: sudo apt install python3-pip # https://github.com/rrthomas/psutils
       - name: Configure Python Venv
         run: python3 -m venv ${{ runner.temp }}/tmpvenv && ${{ runner.temp }}/tmpvenv/bin/pip install -r themes/ishill/requirements.txt
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo for the zines
