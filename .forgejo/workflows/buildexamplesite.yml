@@ -75,7 +75,7 @@ jobs:
             --minify \
             --baseURL "https://${{ forge.repository_owner }}.codeberg.page/ishill-examplesite/"
       - name: Deploy
-      - uses: https://codeberg.org/git-pages/action@v2
+        uses: https://codeberg.org/git-pages/action@v2
         with:
           site: "https://${{ forge.repository_owner }}.codeberg.page/ishill-examplesite/"
           token: ${{ forge.token }}
