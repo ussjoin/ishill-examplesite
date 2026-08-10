@@ -3,7 +3,7 @@ set -euxo pipefail
 
 rm -Rf public/*
 hugo -F
-source thevenv/bin/activate
+source ishill-venv/bin/activate
 cd public
 bash zineify.sh
 cd ..

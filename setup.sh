@@ -1,7 +1,6 @@
 #!env bash
 set -euxo pipefail
 
-rm -Rf thevenv
-python3 -m venv thevenv
-./thevenv/bin/pip3 install -r requirements.txt
-
+rm -Rf ishill-venv
+python3 -m venv ishill-venv
+./ishill-venv/bin/pip3 install -r themes/ishill/requirements.txt
