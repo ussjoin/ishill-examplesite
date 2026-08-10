@@ -55,7 +55,7 @@ weight = 2
 
   # Cause the whole site to be downloadable as a zip file, linked in the footer.
   # This makes it easy to replicate; see generally https://en.wikipedia.org/wiki/Samizdat.
-  enableZipFile = true
+  enableArchive = true
 
 # Media type definitions
 
