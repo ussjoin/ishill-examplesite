@@ -21,8 +21,6 @@ build-job:
     - tar -xzf /tmp/hugo.tgz
     - ./hugo --gc --minify
     - source /tmp/tmpvenv/bin/activate && cd public && sh ./zineify.sh && cd ..
-    - ./hugo --gc --minify --baseURL "https://www.autistici.org/ishill/"
-    - rclone --config $RCLONE_CONFIG sync public autistici:html-ishill
     - ./hugo --gc --minify --baseURL "https://ishillexamplesite.nfshost.com/"
     - rclone --config $RCLONE_CONFIG sync public nearlyfreespeech:/home/public
     - ./hugo --gc --minify --baseURL "$CI_PAGES_URL/"
