@@ -13,7 +13,6 @@ This is the example site repository. Most Hugo themes have an example site that 
 * Example site hosted on [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/): <https://ussjoin.codeberg.page/ishill-examplesite/>
     * Example site repository on Codeberg: <https://github.com/ussjoin/ishill-examplesite>
     * Theme repository on Codeberg: <https://codeberg.org/ussjoin/ishill>
-* Example site hosted on [Autistici/Inventati](https://www.autistici.org/): <https://www.autistici.org/ishill/>
 * Example site hosted on [NearlyFreeSpeech.net](https://www.nearlyfreespeech.net/): <https://ishillexamplesite.nfshost.com/>
 
 A bit more content for this README coming soon, but go look at the "Ishill Monograph" on any of the above sites to learn more about Ishill and how to use it.

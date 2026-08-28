@@ -13,7 +13,6 @@ Ishill ([pronounced](https://en.m.wikibooks.org/wiki/Romanian/Pronunciation_and_
     * Example site repository on GitLab: <https://gitlab.com/ussjoin/ishill-examplesite>
 * Example site hosted on GitHub Pages: <https://ussjoin.github.io/ishill-examplesite/>
     * Example site repository on GitHub: <https://github.com/ussjoin/ishill-examplesite>
-* **Example site hosted on Autistici/Inventati (A/I): <https://www.autistici.org/ishill/>**
 * Theme repository on GitLab: <https://gitlab.com/ussjoin/ishill>
 * Theme repository on GitHub: <https://github.com/ussjoin/ishill>
 

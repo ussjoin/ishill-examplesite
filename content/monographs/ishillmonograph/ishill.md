@@ -37,7 +37,7 @@ Ishill is a zine publishing stack built on top of [Hugo](https://gohugo.io/), th
 
 This section of the zine is written for people who don't know how to use Hugo and don't feel like they want to learn much of it right now. 
 
-If you already know how to use Hugo, great! If you don't know how to use Hugo, but you feel comfortable learning a new tech skill, check out the [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/), except that you'll want to use `ishill` instead of `ananke`, and `https://gitlab.com/ussjoin/ishill.git` (or the same path at `github.com`) instead of the similar `ananke` path. Good luck!
+If you already know how to use Hugo and Git, great! If you know Git, but don't know how to use Hugo, and you feel comfortable learning a new tech skill, check out the [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/), except that you'll want to use `ishill` instead of `ananke`, and `https://gitlab.com/ussjoin/ishill.git` (or the same path at `github.com`) instead of the similar `ananke` path. Good luck!
 
 ### 1. Clone the repo
 
@@ -46,10 +46,6 @@ If you already know how to use Hugo, great! If you don't know how to use Hugo, b
 ### 3. Change the Config
 
 ### 4. Add Content
-
-### 5. Publish (Autistici/Inventati)
-
-Autistici/Inventati (abbreviated A/I) is the home of the well-loved https://noblogs.org/, but they also provide free hosting for static websites just like Ishill sites (or any Hugo sites). A step-by-step guide to using their WebDAV upload system for Ishill is coming soon, though [their docs are also excellent](https://www.autistici.org/docs/web/webdav).
 
 ### 5. Publish (GitLab)
 
@@ -87,6 +83,8 @@ Now, click Deploy (on the left), then Pages. Then do the following:
 4. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
 5. Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. 
 6. Click "Run workflow," then the green "Run workflow" button. 
+
+### 5. Publish (Codeberg)
 
 ## More Coming Soon
 
