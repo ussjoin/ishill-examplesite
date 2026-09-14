@@ -38,7 +38,7 @@ weight = 2
 
 [params]
 	mode = "auto" # color-mode → light,dark,toggle or auto
-  customcss = []
+  customcss = ["css/newtypeface.css"]
   subtitle = "A demonstration of the Ishill zine publishing stack. Click About to learn more."
   submissions = "donotemail@example.com"
 
