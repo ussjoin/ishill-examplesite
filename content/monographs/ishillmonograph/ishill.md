@@ -6,7 +6,7 @@ weight = 20
 [params]
   author = "Brendan Francis O'Connor"
   author_url = 'https://ussjoin.com'
-  original_url = 'https://gitlab.com/ussjoin/ishill'
+  original_url = 'https://codeberg.org/ussjoin/ishill'
   original_date = '2025-05-30'
 +++
 
@@ -18,7 +18,7 @@ Hello ideally-human person! You've probably found this at [Codeberg](https://cod
 
 **Want to write/make zines** but don't have Illustrator or InDesign, and aren't a good enough artist to do twenty pages of lettering by hand? Want to use a computer to make longer content than the (lovely, if short) [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) format? Optionally, want to simultaneously publish to print and the web, so that people who come across one of your zines can find more?
 
-Ishill is for you. It's a zine publishing toolkit built on top of a blog toolkit ([Hugo](https://gohugo.io/)) that lets you quickly create for web, PDF, and zine. If you want to, you can use it to publish your content _for free_ on the Internet, on a site only you control (no Facebook/Instagram/etc. nonsense), and with no lock-in; you can move it anywhere at a moment's notice. You can use a domain name you own, or use a free subdomain of either of two gigantic code providers (GitLab and GitHub) (or a reasonably-sized nonprofit code provider, Codeberg, which offers the same functionality), and use their computer time and web servers to distribute your content to the world. You can also host it on any web host that can host static sites, which is... pretty much all of them, for either free or nearly no money. You can also publish it on [Tor](https://www.torproject.org/), or even keep it offline and just use it as a fast Markdown-to-PDF pipeline.
+Ishill is for you. It's a zine publishing toolkit built on top of a blog toolkit, [Hugo](https://gohugo.io/), that lets you quickly create for web, PDF, and zine. If you want to, you can use it to publish your content _for free_ on the Internet, on a site only you control (no Facebook/Instagram/etc. nonsense), and with no lock-in; you can move it anywhere at a moment's notice. You can use a domain name you own, or use a free subdomain of either of two gigantic code providers (GitLab and GitHub) (or a reasonably-sized nonprofit code provider, Codeberg, which offers the same functionality), and use their computer time and web servers to distribute your content to the world. You can also host it on any web host that can host static sites, which is... pretty much all of them, for either free or nearly no money. You can also publish it on [Tor](https://www.torproject.org/), or even keep it offline and just use it as a fast Markdown-to-PDF pipeline.
 
 Hugo is a "static site generator," so while it takes a teensy bit of tech knowledge to get it set up (we'll help you! That's what this zine is), you don't need to worry about securing it or getting hacked; most hosts for static sites don't let you configure anything that could get you in trouble, which is just how you should like it.
 
@@ -26,7 +26,7 @@ Sound good? Read on.
 
 ## The Pitch (if you spend a lot of time working with tech)
 
-Ishill is a zine publishing stack built on top of [Hugo](https://gohugo.io/), the static site generator, with some add-on tools to do Markdown-to-zine efficiently. It has "happy path" deployments to [CodeBerg Pages](https://docs.codeberg.org/codeberg-pages/), [GitLab Pages](https://docs.gitlab.com/user/project/pages/) (using GitLab CI/CD), and [GitHub Pages](https://pages.github.com/) (using GitHub Actions), but since it's basically Hugo plus a couple of shell scripts, you can run it anywhere with a modicum of tech knowledge. If you need a full tech stack:
+Ishill is a zine+web publishing stack built on top of [Hugo](https://gohugo.io/), the static site generator, with some add-on tools to do Markdown-to-zine efficiently. It has "happy path" deployments to [CodeBerg Pages](https://docs.codeberg.org/codeberg-pages/), [GitLab Pages](https://docs.gitlab.com/user/project/pages/) (using GitLab CI/CD), and [GitHub Pages](https://pages.github.com/) (using GitHub Actions), but since it's basically Hugo plus a couple of shell scripts, you can run it anywhere \*nix-y with a modicum of tech knowledge. If you need a full tech stack:
 
 * [Hugo](https://gohugo.io/) for core Markdown-to-HTML rendering
 * [Weasyprint](https://weasyprint.org/) for HTML/CSS-to-PDF rendering
@@ -79,6 +79,8 @@ How to alias them
 
 Why this is good. Also, how to turn it off if you don't want it for whatever reason.
 
+Note that it's a copy of the website, not of the code to make the website; it helps people spread your words even if your site is taken offline, but it's not a substitute for backing up your Hugo folders (either on a Git host or in any other way).
+
 ### Deployable anywhere, nothing external
 
 Static site hosts
@@ -119,7 +121,7 @@ Now, click Deploy (on the left), then Pages. Then do the following:
 4. Now GitLab has successfully overwritten the perfectly good build file the repository started with. This is suboptimal. Luckily, you have a fix! 
 5. Click the name of your repository (it's likely just to the right of your name) near the top of your screen, so you see your files again.
 6. Click `.gitlab-ci.yml`, which will almost certainly have a message next to it like "Update .gitlab-ci.yml."
-7. Open <https://gitlab.com/ussjoin/ishill-examplesite/-/blob/main/.gitlab-ci.yml> in another browser tab. Select all the text that's in the file (in the monospaced typeface). Copy it (Ctrl-C, Command-C, etc.)
+7. Open <https://codeberg.org/ussjoin/ishill-examplesite/-/blob/main/.gitlab-ci.yml> in another browser tab. Select all the text that's in the file (in the monospaced typeface). Copy it (Ctrl-C, Command-C, etc.)
 8. Back in your main browser, click the blue Edit button on the upper-right, then "Edit Single File."
 9. Select all in the editor.
 10. Paste what you copied from the other tab (Ctrl-V, Command-V, etc.).
@@ -158,5 +160,9 @@ Who was Ishill
 Why he mattered
 Woodcut of him
 Pronounciation
+
+## Parting Notes
+
+Send me an email if you use this, I'm always looking for good things to read
 
 
