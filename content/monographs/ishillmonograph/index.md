@@ -14,4 +14,4 @@ summary = "Do you want to say something? This might help. For techies, it's Mark
     render = "never"
 +++
 
-This monograph demonstrates how to use Ishill to create zines easily, and attempts to explain why you'd want to. It's very much still a draft; it would benefit from much more content, but I'm still working on both documentation and on non-documentation.
+This monograph demonstrates how to use Ishill to create zines easily, and attempts to explain why you'd want to. It's very much still a draft; it would benefit from much more content, but I'm still working on both documentation and on non-documentation. Assume you're seeing it as I'm writing it.
