@@ -1,9 +1,9 @@
 baseURL = "https://example.com/"
 locale = 'en-us'
-title = "Ishill Demosite"
+title = "Ishill Example Site"
 theme = "ishill"
 
-pagination.pagerSize = 5 # articles per page
+pagination.pagerSize = 5 # articles per page, e.g., on the homepage
 
 enableGitInfo = true
 
@@ -40,7 +40,7 @@ weight = 2
 	mode = "auto" # color-mode → light,dark,toggle or auto
   customcss = ["css/newtypeface.css"]
   subtitle = "A demonstration of the Ishill zine publishing stack. Click About to learn more."
-  submissions = "donotemail@example.com"
+  submissions = "donotemail@fake-email-address.com"
 
   # used in homepage "unfurl" for Slack and similar
   description = "Ishill makes it easy to create good-looking zine content on the web and in print."
