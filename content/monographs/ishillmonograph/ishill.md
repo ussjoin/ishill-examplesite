@@ -14,6 +14,10 @@ Hello ideally-human person! You've probably found this at [Codeberg](https://cod
 
 **Note: this monograph is always going to be incomplete, because the set of all things one can do with software is vast.** We hope it's useful to you even as-is. You're welcome to reach out for further assistance using the Issues function on [Codeberg](https://codeberg.org/ussjoin/ishill/issues), and I'll do my best to aid you (and add the things that confused you to this document so that they can help others!).
 
+## The Pitch (Short)
+
+Ishill ([pronounced](https://en.m.wikibooks.org/wiki/Romanian/Pronunciation_and_alphabet) EE-sheell) is a publishing stack to enable people to go quickly from "I have an idea I want to hand out as a zine" to "I have a stack of zines." It is named in honor of [Joseph Ishill](https://en.wikipedia.org/wiki/Joseph_Ishill), a printer.
+
 ## The Pitch (Human)
 
 **Want to write/make zines** but don't have Illustrator or InDesign, and aren't a good enough artist to do twenty pages of lettering by hand? Want to use a computer to make longer content than the (lovely, if short) [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) format? Optionally, want to simultaneously publish to print and the web, so that people who come across one of your zines can find more?
@@ -32,6 +36,62 @@ Ishill is a zine+web publishing stack built on top of [Hugo](https://gohugo.io/)
 * [Weasyprint](https://weasyprint.org/) for HTML/CSS-to-PDF rendering
 * [PDFImpose](https://framagit.org/spalax/pdfimpose) for imposition (arranging the order of pages so you can print them double-sided and fold them into a zine)
 * [Some Shell Scripts](https://xkcd.com/1319/) to tie it together.
+
+## Why?
+
+Why do this? A few reasons.
+
+* For one thing, it's *obnoxiously* difficult to go from Markdown (or any simple text format) to zine. If it could fit on a [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) (so less than half a normally-printed page), great. If it can fit on one printed page, front and back, one can make a four-half-page brochure with a bit of mucking about in Word, Pages, or similar. After that, it's not simple unless you have [Adobe InDesign](https://www.adobe.com/products/indesign.html) or other dedicated (and very expensive) prepress software; as far as I've found, there's no "happy path" for making the transition.
+    * OK, technically [The Anarchist Library Bookbuilder](https://theanarchistlibrary.org/bookbuilder) has a stack to do this as well, but it doesn't use Markdown or anything else popular, instead defaulting to something only known to the kind of people who use Emacs. Ain't nobody got time for that, we want to publish zines!
+* For another, [Travis Goodspeed](https://github.com/travisgoodspeed)'s groundbreaking and iconic [International Journal of Proof of Concept or Get the Fuck Out (POC||GTFO)](https://github.com/angea/pocorgtfo) introduced hackers to the idea that our research wasn't immune from memoryholing, at the end of the day; a lot of people, myself included, learned about [samizdat](https://en.wikipedia.org/wiki/Samizdat) from Travis. Zines have a lot of influences, but samizdat is certainly one of them.
+    * I don't think it's a real surprise in 2026 that memory holing research and communcation is at top of mind for many communities.
+* Why a website? Personally, when I find a zine that I like, I try to find the author and/or publishing collective to find more things that might be enjoyable, just as I do with authors. I wanted to make it as easy to publish a zine as a single blog post, and as easy to start a publisher as a blog site. If you don't want the website parts, this is a bit overengineered, but you can still use it to generate your zines and print them (which is, as noted above, a major pain).
+
+## Neat Features of Ishill
+
+There are a few neat things that come from using blog software to host and render zines. If you only care about using Ishill as a tool to go from Markdown to printable PDF, you may not care about them, but I thought they were useful.
+
+### Deployable anywhere
+
+Websites come in two very broad categories; "static" websites, where content cannot change from moment to moment (or in response to who's viewing it), and "dynamic," where it can. This is closely related to (but technically separate from) whether the site uses JavaScript, where part of the site runs on your computer/phone. The vast, vast majority of sites people use in 2026 are "dynamic" _and_ use JavaScript, but neither is required for a website, particularly one that isn't monetized. Similarly, most "easy ways to make websites" (Wordpress, SquareSpace, etc.) are dynamic.
+
+Ishill is not dynamic. It's just a theme for the [Hugo](https://gohugo.io/) static site generator, and once Hugo generates a site, it's just a set of files. This means it can be hosted not just on expensive "dynamic" host providers, but on a huge array of "static web hosts." Those are often free (supported by hypervisor corporations, like [GitHub Pages](https://docs.github.com/en/pages), or other code hosts, like [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/) or [GitLab Pages](https://docs.gitlab.com/user/project/pages/)) or very low cost. We use NearlyFreeSpeech.net, whose prices we like (and whose politics [are excellent](https://blog.nearlyfreespeech.net/2025/07/27/a-quick-note-to-our-queer-members/)), as our paid example site host. Many domain registrars have some sort of static site hosting for free when you register a domain. You get the idea.
+
+Ishill also does not use JavaScript. That's not a Hugo requirement, we just don't wish to do so. You can certainly add JavaScript to it, but there's no need to do so. (Most JavaScript is used to track and monetize visitors, so, frankly, we don't want to do it and we don't have to.)
+
+### Nothing External
+
+Since there's nothing that requires that users run JavaScript or access any other server (this is atypical for websites in 2026, with Google Fonts, CDNs, tons of web trackers, ... but not actually difficult to do if I'm not trying to market to you and sell your data to brokers!), this means anyone can preserve your site forever, as long as the HTML, CSS, and PDF formats are still readable (they've been around since 1990, 1996, and 1993 respectively, and two are written in ASCII, a format written in 1963; it's not a clay tablet, but it's not bad for something intangible). There's nothing by default that can go offline and make your site stop working. That's pretty neat for the next feature:
+
+### Self-Archiving
+
+Ishill's build process (the thing that turns it from a pile of Markdown files into a website and bunch of zine PDFs) takes a copy of the whole site and puts it in a zip file, linked in the website footer. This means that **anyone** visiting the site can download the whole site, read it offline, or even put up a copy should yours go offline. Since there's nothing that requires that users run JavaScript or access any other server (this is atypical for websites in 2026, with Google Fonts, trackers, ... but not actually difficult to do if I'm not trying to market to you and sell your data to brokers!), this means anyone can preserve your site forever, as long as the HTML, CSS, and PDF formats are still readable (they've been around since 1990, 1996, and 1993 respectively, and two are written in ASCII, a format written in 1963; it's not a clay tablet, but it's not bad for something intangible). (And see the note above about samizdat.)
+
+If you want to turn this off, set `enableArchive = false` in the `[params]` section of your `config.toml` file.
+
+**NB**: the process creates a copy of your finished site, not the Markdown and build scripts used to create it. If you want to keep a backup of that (you should), make sure to back up your site's folder on your computer--either by creating your own fork on a Git host (Codeberg, GitLab, GitHub, whatever), or just by copying it elsewhere from time to time.
+
+### RSS
+
+Remember [Google Reader](https://en.wikipedia.org/wiki/Google_Reader)? The same technology (RSS/Atom, invented by [someone driven to suicide to punish him for not believing in copyright enough](https://en.wikipedia.org/wiki/Aaron_Swartz)--in the same way now being done by every LLM corporation, which seems a bit on the nose even for 2026) still exists, and there are many tools (paid and free, cloud-hosted or self-hosted or desktop apps or mobile apps) to allow users to follow the feeds. Every new zine in Ishill will appear in your RSS feed, and any feed reader can find your RSS feed (technically an Atom feed, but it doesn't matter) given your site's URL. (It's `yoursite.place/index.xml`, FWIW.)
+
+### Easy to Change Styles
+
+Hugo makes it very easy to change anything about the theme; you add a file with the same name to your site's folder, copy the theme file in there, and then make any changes you want. If you only want to add CSS, put the file in `assets/css/` and add the filename to the `[params].customcss` array in your `config.toml`. If you only want to change the typeface or font, look at `assets/css/newtypeface.css` for how to do that (font files will go in `static/fonts`).
+
+While you can make a local copy of the theme folder itself and edit the theme that way, I recommend you don't; if you do, it will be difficult to upgrade the base theme (and get any bug fixes) without losing your changes in the future.
+
+## Types of Publications in Ishill
+
+Why you care
+
+How to alias them
+
+### Monograph
+
+### Leaflet
+
+### Imprint
 
 ## How to Get Going as Quickly as Possible
 
@@ -60,36 +120,6 @@ TODO: Remember the setup script! Then the build script and hugo serve.
 You know how it works to make it build zines, and you've got some steps you can follow. Fantastic! Now explore the files and folders in the example site as you read the rest of this, and you can experiment from there.
 
 There's no rush to deploy to a working website, but when you want to, the last part of this zine is called [Putting it on the Internet]().
-
-## Types of Publications in Ishill
-
-Why you care
-
-How to alias them
-
-### Monograph
-
-### Leaflet
-
-### Imprint
-
-## Other Neat Features
-
-### Self-Archiving
-
-Why this is good. Also, how to turn it off if you don't want it for whatever reason.
-
-Note that it's a copy of the website, not of the code to make the website; it helps people spread your words even if your site is taken offline, but it's not a substitute for backing up your Hugo folders (either on a Git host or in any other way).
-
-### Deployable anywhere, nothing external
-
-Static site hosts
-
-Other deployment options: USB drive, radio broadcast, whatever. It doesn't need the Internet. That might be useful sooner rather than later.
-
-### How to Change Styles
-
-Critical to note: override, don't change the theme, or you'll be stuck later if you want to upgrade.
 
 ## Putting it on the Internet
 
@@ -154,15 +184,7 @@ TODO: Push the repo to Codeberg
 
 TODO: Migrate the current Codeberg deployment to the new cute webhook thing, unless we can't with the zipping and zines (likely). In which case, document the current setup.
 
-## Why Ishill?
-
-Who was Ishill
-Why he mattered
-Woodcut of him
-Pronounciation
-
 ## Parting Notes
 
-Send me an email if you use this, I'm always looking for good things to read
-
+Send me an email at <ishill@ussjoin.com> if you use this; I'm always looking for good things to read, and maybe I'll add you to a directory in the theme repository, so people can see what it looks like. Also, keep an eye occasionally on the theme repository, because I may release bugfixes or new features from time to time. (No guarantees, but hey.) If you have suggested features, please feel free to submit them as issues at <https://codeberg.org/ussjoin/ishill>.
 
