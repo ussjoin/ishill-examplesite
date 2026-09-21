@@ -25,3 +25,7 @@ html, p, ul {
     }
     
 }
+
+h2 {
+    margin-bottom: 0;
+}
