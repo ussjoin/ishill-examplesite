@@ -16,7 +16,7 @@ Hello ideally-human person! You've probably found this at [Codeberg](https://cod
 
 ## The Pitch (Short)
 
-Ishill ([pronounced](https://en.m.wikibooks.org/wiki/Romanian/Pronunciation_and_alphabet) EE-sheell) is a publishing stack to enable people to go quickly from "I have an idea I want to hand out as a zine" to "I have a stack of zines." It is named in honor of [Joseph Ishill](https://en.wikipedia.org/wiki/Joseph_Ishill), a printer.
+Ishill ([pronounced](https://en.m.wikibooks.org/wiki/Romanian/Pronunciation_and_alphabet) EE-sheell) is a publishing stack, built on the excellent Hugo static site generator, to enable people to go quickly from "I have an idea I want to hand out as a zine" to "I have a stack of zines." It is named in honor of [Joseph Ishill](https://en.wikipedia.org/wiki/Joseph_Ishill), a printer.
 
 ## The Pitch (Human)
 
