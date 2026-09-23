@@ -62,10 +62,10 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.action_repository }}/"
+            --baseURL "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.event.repository.name }}/"
       - name: Deploy
         uses: https://codeberg.org/git-pages/action@v2
         with:
-          site: "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.action_repository }}/"
+          site: "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.event.repository.name }}/"
           token: ${{ forge.token }}
           source: public/
