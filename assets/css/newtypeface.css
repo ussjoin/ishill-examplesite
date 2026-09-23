@@ -26,6 +26,10 @@ html, p, ul {
     
 }
 
+code {
+    font-size: smaller;
+}
+
 h2 {
     margin-bottom: 0;
 }
