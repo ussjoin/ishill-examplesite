@@ -62,10 +62,10 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://${{ forge.repository_owner }}.codeberg.page/ishill-examplesite/"
+            --baseURL "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.action_repository }}/"
       - name: Deploy
         uses: https://codeberg.org/git-pages/action@v2
         with:
-          site: "https://${{ forge.repository_owner }}.codeberg.page/ishill-examplesite/"
+          site: "https://${{ forge.repository_owner }}.codeberg.page/${{ forge.action_repository }}/"
           token: ${{ forge.token }}
           source: public/
