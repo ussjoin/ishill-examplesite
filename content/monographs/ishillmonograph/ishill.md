@@ -1,13 +1,11 @@
 +++
 draft = false
-title = "What's Ishill? Why Ishill? How Ishill?"
+title = "What's Ishill? Why does it exist? How do I use it?"
 weight = 20
 
 [params]
   author = "Brendan Francis O'Connor"
   author_url = 'https://ussjoin.com'
-  original_url = 'https://codeberg.org/ussjoin/ishill'
-  original_date = '2026-09-23'
 +++
 
 Hello ideally-human person! You've probably found this at [Codeberg](https://codeberg.org/ussjoin/ishill) or [GitLab](https://gitlab.com/ussjoin/ishill) or [GitHub](https://github.com/ussjoin/ishill), or possibly on a bench somewhere in meatspace. Read on to learn what you've found!
@@ -42,7 +40,7 @@ Sound good? Read on.
 Ishill is a zine+web publishing stack built on top of [Hugo](https://gohugo.io/), the static site generator, with some add-on tools to do Markdown-to-zine efficiently. It has "happy path" deployments to [CodeBerg Pages](https://docs.codeberg.org/codeberg-pages/), [GitLab Pages](https://docs.gitlab.com/user/project/pages/) (using GitLab CI/CD), and [GitHub Pages](https://pages.github.com/) (using GitHub Actions), but since it's basically Hugo plus a couple of shell scripts, you can run it anywhere \*nix-y with a modicum of tech knowledge. If you need a full tech stack:
 
 * [Hugo](https://gohugo.io/) for core Markdown-to-HTML rendering
-* [Weasyprint](https://weasyprint.org/) for HTML/CSS-to-PDF rendering
+* [WeasyPrint](https://weasyprint.org/) for HTML/CSS-to-PDF rendering
 * [PDFImpose](https://framagit.org/spalax/pdfimpose) for imposition (arranging the order of pages so you can print them double-sided and fold them into a zine)
 * [Some Shell Scripts](https://xkcd.com/1319/) to tie it together.
 
@@ -52,21 +50,22 @@ Why do this? A few reasons.
 
 * For one thing, it's *obnoxiously* difficult to go from Markdown (or any simple text format) to zine. If it could fit on a [minizine](https://www.icaboston.org/articles/make-your-own-mini-zine/) (so less than half a normally-printed page), great. If it can fit on one printed page, front and back, one can make a four-half-page brochure with a bit of mucking about in Word, Pages, or similar. After that, it's not simple unless you have [Adobe InDesign](https://www.adobe.com/products/indesign.html) or other dedicated (and very expensive) prepress software; as far as I've found, there's no "happy path" for making the transition.
     * OK, technically [The Anarchist Library Bookbuilder](https://theanarchistlibrary.org/bookbuilder) has a stack to do this as well, but it doesn't use Markdown or anything else popular, instead defaulting to something only known to the kind of people who use Emacs. Ain't nobody got time for that, we want to publish zines!
+    * Note that "not simple" doesn't mean "impossible;" folks comfortable with stacking command-line tools can get it done--but there's nothing turnkey to make it happen.
 * For another, [Travis Goodspeed](https://github.com/travisgoodspeed)'s groundbreaking and iconic [International Journal of Proof of Concept or Get the Fuck Out (POC||GTFO)](https://github.com/angea/pocorgtfo) introduced hackers to the idea that our research wasn't immune from memoryholing, at the end of the day; a lot of people, myself included, learned about [samizdat](https://en.wikipedia.org/wiki/Samizdat) from Travis. Zines have a lot of influences, but samizdat is certainly one of them.
     * I don't think it's a real surprise in 2026 that memory holing research and communication is at top of mind for many communities.
-* Why a website? Personally, when I find a zine that I like, I try to find the author and/or publishing collective to find more things that might be enjoyable, just as I do with authors. I wanted to make it as easy to publish a zine as a single blog post, and as easy to start a publisher as a blog site. If you don't want the website parts, this is a bit over-engineered, but you can still use it to generate your zines and print them (which is, as noted above, a major pain).
+* Why make a website for printed zines? Personally, when I find a zine that I like, I try to find the author and/or publishing collective to find more things that might be enjoyable, just as I do with authors. I wanted to make it as easy to publish a zine as a single blog post, and as easy to start a zine publishing house as it is to start a blog site. If you don't want the website parts, this is a bit over-engineered, but you can still use it to generate your zines and print them (which is, as noted above, a major pain).
 
 ## Neat Features of Ishill
 
-There are a few neat things that come from using blog software to host and render zines. If you only care about using Ishill as a tool to go from Markdown to printable PDF, you may not care about them, but I thought they were useful.
+There are a few neat things that come from using blog software to host and render zines. If you only care about using Ishill as a tool to go from Markdown to printable PDF, you may not care about all of these, but I thought they were useful.
 
 ### Endnotes from Links
 
-One of the goals of Ishill is to generate quality printed matter from normal Markdown, because Ishill generates both a website and a set of printable zines at the same time. One issue arises: while PDFed HTML will preserve links (that is, the same words will be clickable on the website and in the PDF), once you print the PDF, that ability goes away; you can't click a page. To make sure that the context provided by a link isn't lost, Ishill takes links and replaces them with numbered endnotes, *in the PDFs only;* the web pages preserve the normal links.
+One of the goals of Ishill is to generate quality printed matter from normal Markdown, because Ishill generates both a website and a set of printable zines at the same time. One issue arises: while normal PDFed HTML (e.g., from "Print to PDF") will preserve links (that is, the same words will be clickable on the website and in the PDF), once you print the PDF, that ability goes away; you can't click a page. To make sure that the context provided by a link isn't lost, Ishill takes links and replaces them with numbered endnotes, *in the PDFs only;* the web pages preserve the normal links.
 
 ### Deployable Anywhere
 
-Websites come in two very broad categories; "static" websites, where content cannot change from moment to moment (or in response to who's viewing it), and "dynamic," where it can. This is closely related to (but technically separate from) whether the site uses JavaScript, where part of the site runs on your computer/phone. The vast, vast majority of sites people use in 2026 are "dynamic" _and_ use JavaScript, but neither is required for a website, particularly one that isn't monetized. Similarly, most "easy ways to make websites" (Wordpress, SquareSpace, etc.) are dynamic.
+Websites come in two very broad categories; "static" websites, where content cannot change from moment to moment (or in response to who's viewing it), and "dynamic," where it can. This is closely related to (but technically separate from) whether the site uses JavaScript, where part of the site runs on your computer/phone. The vast, vast majority of sites people use in 2026 are "dynamic" _and_ use JavaScript, but neither is required for a website, particularly one that isn't monetized. Similarly, most "easy ways to make websites" (WordPress, SquareSpace, etc.) are dynamic.
 
 Ishill is not dynamic. It's just a theme for the [Hugo](https://gohugo.io/) static site generator, and once Hugo generates a site, it's just a set of files. This means it can be hosted not just on expensive "dynamic" host providers, but on a huge array of "static web hosts." Those are often free (supported by hypervisor corporations, like [GitHub Pages](https://docs.github.com/en/pages), or other code hosts, like [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/) or [GitLab Pages](https://docs.gitlab.com/user/project/pages/)) or very low cost. We use NearlyFreeSpeech.net, whose prices we like (and whose politics [are excellent](https://blog.nearlyfreespeech.net/2025/07/27/a-quick-note-to-our-queer-members/)), as our paid example site host. Many domain registrars have some sort of static site hosting for free when you register a domain. You get the idea.
 
@@ -112,7 +111,7 @@ Each zine folder has an `index.md` which contains the front matter (title, autho
 
 There's one other key feature in the `index.md`: the parameter called `extra_spacer_pages` in the `[params]` section. It's the number of spacer pages you want to insert between the end of your content and the rear cover page. This matters because a saddle-stitched zine needs to have its number of pages divisible by 4 so that it can print (front and back sides of one sheet, then folded in half). The tooling will pad out your page count automatically, but it can only do so by putting blank pages at the _end_, which will mean that the back cover (your publisher contact information, etc.) won't be in the right place. Use `extra_spacer_pages` to insert pages *before* the back cover so that the count comes out correctly. The way to do this is to build the zines and look at them, then count; I'm really sorry to make you do this manually, but I haven't yet figured out how to do it automatically in the context of Hugo's build system. (This all sounds complicated but takes about three seconds; the important bit is to make sure you do it just as you're ready to publish, to make sure that added content doesn't change your page count--but if you forget, it'll be obvious when you look at the impressed zine.)
 
-> Technical explanation for this flaw (feel free to skip): Hugo doesn't know what the page count is, because Weasyprint acts as the "browser" that views the HTML generated by Hugo (which determines the page size). It uses the parameter to turn three divs on or off at build time (see `layouts/partials/spacer.html`). It seems like there ought to be a way for some sort of CSS `@media` query to know what the page count is going to be, *and therefore turn `display` to `block` or `none` on those three elements*, in roughly the same way that the page numbers are generated--but I couldn't figure out how to make it work. This embarrasses me, and one day I'll figure it out, but I've spent an inordinate amount of time on it and decided to do the dirty hack instead. If a CSS expert knows how to do this, *please* contact me: <ishill@ussjoin.com>. (Or open a pull request on Codeberg, of course!)
+> Technical explanation for this flaw (feel free to skip): Hugo doesn't know what the page count is, because WeasyPrint acts as the "browser" that views the HTML generated by Hugo (which determines the page size). It uses the parameter to turn three `div`s on or off at build time (see `layouts/partials/spacer.html`). It seems like there ought to be a way for some sort of CSS `@media` query to know what the page count is going to be, *and therefore turn `display` to `block` or `none` on those three elements*, in roughly the same way that the page numbers are generated--but I couldn't figure out how to make it work. This embarrasses me, and one day I'll figure it out, but I've spent an inordinate amount of time on it and decided to do the dirty hack instead. If a CSS expert knows how to do this, *please* contact me: <ishill@ussjoin.com>. (Or open a pull request on Codeberg, of course!)
 
 ### Leaflet
 
@@ -130,7 +129,9 @@ Imprints are a special kind of publication. Unlike leaflets and monographs, impr
 
 This section of the zine is written for people who don't know how to use Hugo and don't feel like they want to learn much of it right now. You shouldn't really go straight into production (as in, create a live website and put this up there) this way as your first experiment, but it shows you how things work and lets you get a feel for the way a Hugo deployment works. You will need to enter commands on the command line, but we'll try to provide clear instructions for them (or give terms you can put in a search engine).
 
-If you already know how to use Hugo and Git, great! Some of this will be pretty trivial. You'll still want to work using the example site as a base, just because the theme makes some assumptions about certain paths (mostly around the publication types documented above). (This is mildly poor software engineering practice, but the complexities of fixing it exceed the wins from doing so, because it's unlikely that someone is going to change their "normal" Hugo website into an Ishill instance to zineify, say, their entire blog portfolio all at once; if they want to do that, they probably need to change other things anyway (like the front matter). If you disagree, however, I am happy to listen to a counterargument!)
+If you already know how to use Hugo and Git, great! Some of this will be pretty trivial. You'll still want to work using the example site as a base, just because the theme makes some assumptions about certain paths (mostly around the publication types documented above). 
+
+> This is mildly poor software engineering practice, but the complexities of fixing it exceed the wins from doing so, because it's unlikely that someone is going to change their "normal" Hugo website into an Ishill instance to zineify, say, their entire blog portfolio all at once; if they want to do that, they probably need to change other things anyway (like the front matter on each post). If you disagree, however, I am happy to listen to a counterargument!
 
 ### 0. Pick a code host to work from
 
@@ -148,11 +149,11 @@ You can clone the repository to your local machine; use `git clone [repository_c
 
 ### 3. Change the configuration
 
-Open the folder in a text editor. (A coding text editor is helpful here; if you're new to this sort of thing, use something like [Sublime Text](https://www.sublimetext.com/) to get started. You can use it for free as long as you need, so just figure out what editor you want to use later and use it for now.) You don't need to edit anything in the `themes/ishill` folder, but otherwise you can look around and play with things. You should start in the `config.toml` file, which contains a lot of the settings for your site, including changes to the rear zine page and the like. Play with anything; if you forget what you've changed and want to go back, `git diff` will show you what you did.
+Open the folder in a text editor. (A coding text editor is helpful here; if you're new to this sort of thing, use something like [Sublime Text](https://www.sublimetext.com/) to get started. It's paid software (and if you like it, it's worth paying for it), but you can use it for free to evaluate it as long as you need, so just figure out what editor you want to use later and use it as we go through this rapid start.) You don't need to edit anything in the `themes/ishill` folder, but otherwise you can look around and play with things. You should start in the `config.toml` file, which contains a lot of the settings for your site, including changes to the rear zine page and the like. Play with anything; if you forget what you've changed and want to go back, `git diff` will show you what you did.
 
 ### 4. Build
 
-From the example site folder, run `./setup.sh` to get some initial software ready to use (it's mostly getting some Python libraries like [Weasyprint](https://weasyprint.org/) ready), and then run `./build.sh` to run hugo and zineify the three zines in the example site.
+From the example site folder, run `./setup.sh` to get some initial software ready to use (it's mostly getting some Python libraries like [WeasyPrint](https://weasyprint.org/) ready), and then run `./build.sh` to run hugo and zineify the three zines in the example site.
 
 ### 5. View the website (locally)
 
@@ -168,65 +169,78 @@ There's no rush to deploy to a working website, but when you want to, the last p
 
 ## Putting it on the Internet
 
-Don't be in any hurry. The example site is your base, but you're building a new zine publisher; make it look like your own. You should change the site name and contact information of course, but you probably also want to change the quotes for the spacer pages and other stylistic choices. You may want to choose a new typeface; check out `assets/css/newtypeface.css` and `static/fonts` for how to do that. (You can use Google Fonts to find and download typefaces, but please don't use a Google Fonts=*hosted* font by inserting their code into the head of your website; that means every visitor to your site will be known by Google, which is just silly and lazy.)
+Don't be in any hurry. The example site is your base, but you're building a new zine publisher; make it look like your own. You should change the site name and contact information of course, but you probably also want to change the quotes for the spacer pages and other stylistic choices. You may want to choose a new typeface; check out `assets/css/newtypeface.css` and `static/fonts` for how to do that. (You can use Google Fonts to find and download typefaces, but please don't use a Google Fonts-*hosted* font by inserting their code into the head of your website; that means every visitor to your site will be known by Google, which is just silly and lazy.)
 
+You might want to set a custom favicon for your site as well; that's the icon you see in a browser tab, or in a variety of ways on mobile. There are eleventy billion favicon generator sites that can turn text or images you upload into the favicons your site needs, with many different levels of fidelity and complexity. <https://favicon.io/> is a non-LLM-infested site to do the transformations for you, if you'd like. Take the resulting files and put them in `static`, and the HTML code can go in `layouts/partials/custom_head.html`.
 
 ## Deployment Options
 
-Pros/cons of each
+See Deployable Anywhere, above, for an explanation of what Ishill needs and doesn't need in a host. We'll use those four as examples, and if you're doing something else, you can likely use the information here to get what you need. (If you think you need additional information or something could be better-organized, open an issue at <https://codeberg.org/ussjoin/ishill-examplesite> and I'll update the documentation to make it clearer!)
 
 ### NearlyFreeSpeech (or any Other Static Site Host)
 
-See Deployable Anywhere, Nothing External XXX above for what a static site host is.
+NearlyFreeSpeech has excellent documentation, and there's no need for me to rehash it; check out their [Getting Started](https://faq.nearlyfreespeech.net/section/gettingstarted) after you've created an account. When you create a site, pick "Apache 2.4 Static Content"; that's what you have (a static website with no need for PHP, CGI, or Daemons). After you run `./build.sh`, you'll have a `public` folder filled with your whole site; use any of their documented methods for sending its contents to their server.
 
-TODO: Do it
-
-### GitLab Pages
-
-TODO: Push the repo to GitLab
-
-Click Settings (on the left), then General. Scroll to "Visibility, project features, permissions" and click on it. Scroll down to "Pages," click "Only Project Members," and select "Everyone With Access." Scroll to the bottom of the section and click the blue "Save changes" button.
-
-Now, click Deploy (on the left), then Pages. Then do the following:
-
-1. Enter `node:lts` under "Select your build image."
-2. Hit Next.
-3. Next, Next, Commit.
-4. Now GitLab has successfully overwritten the perfectly good build file the repository started with. This is suboptimal. Luckily, you have a fix! 
-5. Click the name of your repository (it's likely just to the right of your name) near the top of your screen, so you see your files again.
-6. Click `.gitlab-ci.yml`, which will almost certainly have a message next to it like "Update .gitlab-ci.yml."
-7. Open <https://codeberg.org/ussjoin/ishill-examplesite/-/blob/main/.gitlab-ci.yml> in another browser tab. Select all the text that's in the file (in the monospaced typeface). Copy it (Ctrl-C, Command-C, etc.)
-8. Back in your main browser, click the blue Edit button on the upper-right, then "Edit Single File."
-9. Select all in the editor.
-10. Paste what you copied from the other tab (Ctrl-V, Command-V, etc.).
-11. Click the blue "Commit Changes" button, then in the popup, click the new blue "Commit Changes" button.
-12. Click the name of your repository, just like you did in step 5.
-13. On the left, click Deploy, then Pages.
-14. Click "Domains & settings."
-15. Uncheck the box that says "Use unique domain," then click "Save changes."
-16. Now you'll have a URL in the box marked "Access pages." Your site will be there!
-17. If the page looks weird (e.g., unformatted), run a new build job. (This is a one-time issue when the URL to your site changes, but you wanted to do that to get rid of the "unique" domain.)
-  1. Click Build, then Pipelines.
-  2. Click the blue "New pipeline" button.
-  3. Click the (new) blue "New pipeline" button. You don't need to enter anything on that page.
-  4. When the build completes, check the site again.
+If you wish to use a CI pipeline to do this, see `gitlab-ci.yml` (and the GitLab Pages section below) for an example that uses `rclone` to ship the example site to NearlyFreeSpeech. (On GitLab's CI, the environment variable `$RCLONE_CONFIG` is set from GitLab's CI/CD variables.) Note that the script also deploys the code to GitLab Pages; if you don't want it to do that, remove that part.
 
 ### GitHub Pages
 
-TODO: Push the repo to GitHub
+[GitHub's documentation](https://docs.github.com/en) will help you get up and running with an account. You'll need to create a new repository (make sure that "Add README" is off), and then follow the instructions for "…or push an existing repository from the command line," prepending `git remote rename origin old-origin` so that you don't get an error. Then:
 
-1. Click Settings, then Pages (on the left). 
-2. Under Branch, where it says "GitHub Pages is currently disabled," click None, then select `main`. 
-3. Click Save. 
-4. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
-5. Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. 
-6. Click "Run workflow," then the green "Run workflow" button. 
+> 1. Click Settings, then Pages (on the left). 
+> 2. Under Branch, where it says "GitHub Pages is currently disabled," click None, then select `main`. 
+> 3. Click Save. 
+> 4. Under Source, click "Deploy from a Branch," then select "GitHub Actions." 
+> 5. Then you'll need to trigger a new build. Click Actions, then click "Build and Deploy an Ishill Site to GHP" on the left. 
+> 6. Click "Run workflow," then the green "Run workflow" button.
+> 7. Wait a bit (you can click into the resulting item to view progress) and your site will be online at <https://YOURUSERNAME.github.io/NAMEOFREPOSITORY/>
+
+Subsequent site builds and deploys will run automatically when you push new code to the repository; the above only needs to be clicked through one time.
 
 ### Codeberg Pages
 
-TODO: Push the repo to Codeberg
+[Codeberg's documentation](https://docs.codeberg.org/) is easy to read, and will help you create a new account and create a new repository; make sure "Initialize repository" is unchecked, and then follow the instructions for "Pushing an existing repository from the command line," prepending `git remote rename origin old-origin` so that you don't get an error. Then:
 
-TODO: Migrate the current Codeberg deployment to the new cute webhook thing, unless we can't with the zipping and zines (likely). In which case, document the current setup.
+> 1. Click Settings, Units, Overview. Check the box next to "Actions" and save.
+> 2. Click Actions, then `buildexamplesite.yml`.
+> 3. Click "Run workflow," then "Run workflow."
+> 4. Wait a bit (you can click into the resulting item to view progress) and your site will be online at <https://YOURUSERNAME.github.io/NAMEOFREPOSITORY/>
+
+Subsequent site builds and deploys will run automatically when you push new code to the repository; the above only needs to be clicked through one time.
+
+### GitLab Pages
+
+GitLab has excellent documentation on most things, so use <https://docs.gitlab.com/> to figure out how to create an account, create a new repository, and push your code to GitLab. (You'll want to create a blank repository, fill out the form, and **uncheck** "Initialize repository with a README," then follow the instructions for "Push an existing Git repository.")
+
+I  found it... complex to get GitLab Pages to work. Here's my summary of what you need to do (please use this in conjunction with their [GitLab Pages documentation](https://docs.gitlab.com/user/project/pages/)):
+
+> Click Settings (on the left), then General. Scroll to "Visibility, project features, permissions" and click on it. Scroll down to "Pages," click "Only Project Members," and select "Everyone With Access." Scroll to the bottom of the section and click the blue "Save changes" button.
+> 
+> Now, click Deploy (on the left), then Pages. Then do the following:
+> 
+> 1. Enter `node:lts` under "Select your build image."
+> 2. Hit Next.
+> 3. Next, Next, Commit.
+> 4. Now GitLab has successfully overwritten the perfectly good build file the repository started with. This is suboptimal. Luckily, you have a fix! 
+> 5. Click the name of your repository (it's likely just to the right of your name) near the top of your screen, so you see your files again.
+> 6. Click `.gitlab-ci.yml`, which will almost certainly have a message next to it like "Update .gitlab-ci.yml."
+> 7. Open <https://codeberg.org/ussjoin/ishill-examplesite/-/blob/main/.gitlab-ci.yml> in another browser tab. Select all the text that's in the file (in the monospaced typeface). Copy it (Ctrl-C, Command-C, etc.)
+> 8. Back in your main browser, click the blue Edit button on the upper-right, then "Edit Single File."
+> 9. Select all in the editor.
+> 10. Paste what you copied from the other tab (Ctrl-V, Command-V, etc.).
+> 11. Click the blue "Commit Changes" button, then in the popup, click the new blue "Commit Changes" button.
+> 12. Click the name of your repository, just like you did in step 5.
+> 13. On the left, click Deploy, then Pages.
+> 14. Click "Domains & settings."
+> 15. Uncheck the box that says "Use unique domain," then click "Save changes."
+> 16. Now you'll have a URL in the box marked "Access pages." Your site will be there!
+> 17. If the page looks weird (e.g., unformatted), run a new build job. (This is a one-time issue when the URL to your site changes, but you wanted to do that to get rid of the "unique" domain.)
+>   1. Click Build, then Pipelines.
+>   2. Click the blue "New pipeline" button.
+>   3. Click the (new) blue "New pipeline" button. You don't need to enter anything on that page.
+>   4. When the build completes, check the site again.
+
+Subsequent site builds and deploys will run automatically when you push new code to the repository; the above only needs to be clicked through one time.
 
 ## Parting Notes
 
