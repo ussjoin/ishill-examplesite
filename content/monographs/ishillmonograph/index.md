@@ -1,5 +1,5 @@
 +++
-date = "2025-05-30"
+date = "2026-09-23"
 draft = false
 title = "Ishill Monograph"
 summary = "Do you want to say something? This might help. For techies, it's Markdown, to a printable impressed zine and a website, as a ready-to-clone Git repository."
