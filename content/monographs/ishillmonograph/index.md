@@ -1,7 +1,7 @@
 +++
 date = "2026-09-23"
 draft = false
-title = "Ishill Monograph"
+title = "Ishill: Software to Make Zines, Easily"
 summary = "Do you want to say something? This might help. For techies, it's Markdown, to a printable impressed zine and a website, as a ready-to-clone Git repository."
 [params]
     extra_spacer_pages = 0
